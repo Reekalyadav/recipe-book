@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About - Delicious Recipe</title>
+  <link rel="stylesheet" href="style2.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+</head>
+<body>
+    <!-- Header/Navbar -->
+  <header>
+    <div class="container">
+      <h1 class="logo">Delicious Recipe</h1>
+      <nav>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <ul class="nav-list" id="navList">
+          <li><a href="index.html" class="nav-item">Home</a></li>
+          <li><a href="about.html" class="nav-item">About</a></li>
+          <li><a href="recipes.html" class="nav-item active">Recipes</a></li>
+          <li><a href="contact.html" class="nav-item">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- Recipes Section -->
+  <section class="recipes-section">
+    <h1>Our Recipes</h1>
+    <p>Explore delicious recipes from different regions of India and beyond.</p>
+
+    <div class="recipe-categories">
+      <div class="category-card">
+        <h2><a href="north.html">North Indian</a></h2>
+        <p>Famous for rich curries, paneer dishes, and tandoori delights.</p>
+        <img src="images/paneer.jpeg" alt="panner" width="200px" height="200px">
+      </div>
+
+      <div class="category-card">
+        <h2><a href="south.html">South Indian</a></h2>
+        <p>Crispy dosas, fluffy idlis, tangy sambar, and coconut-flavored curries.</p>
+        <img src="images/idli.jpeg" alt="idli" width="200px" height="200px">
+      </div>
+    
+      <div class="category-card">
+        <h2><a href="snacks.html">Snacks</a></h2>
+        <p>Quick and easy recipes to satisfy your hunger anytime.</p>
+        <img src="images/samosa.jpeg" alt="samaosa" width="200px" height="200px">
+      </div>
+
+      <div class="category-card">
+        <h2><a href="desserts.html">Desserts</a></h2>
+        <p>Sweet treats that complete any meal like gulab jamun to kheer and halwa.</p>
+        <img src="images/gulab jamun.jpeg" alt="desserts" width="200px" height="200px">
+      </div>
+
+      <div class="category-card">
+        <h2><a href="quick-meals.html">Quick meals</a></h2>
+        <p>Enjoy Indo-Chinese favorites like Hakka noodles, Manchurian, and fried rice.</p>
+        <img src="images/noodles.jpeg" alt="noodles" width="200px" height="200px">
+      </div>
+
+  </section>
+    <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Delicious Recipe | All Rights Reserved</p>
+  </footer>
+
+  <!-- Toggle Script -->
+  <script>
+    function toggleMenu() {
+      document.getElementById('navList').classList.toggle('active');
+    }
+    // Highlight current link
+    const navLinks = document.querySelectorAll('.nav-item');
+    navLinks.forEach(link => {
+      if (link.href === window.location.href) {
+        link.classList.add('active');
+      }
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+     <!-- Header/Navbar -->
+  <header>
+    <div class="container">
+      <h1 class="logo">Delicious Recipe</h1>
+      <nav>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <ul class="nav-list" id="navList">
+          <li><a href="index.html" class="nav-item">Home</a></li>
+          <li><a href="about.html" class="nav-item">About</a></li>
+          <li><a href="recipes.html" class="nav-item">Recipes</a></li>
+          <li><a href="contact.html" class="nav-item active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <h1 class="contact-heading">Contact Us</h1>
+        <form class="contact-form">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Write Your Name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message" required></textarea>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </section>
+     <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Delicious Recipe | All Rights Reserved</p>
+  </footer>
+
+  <!-- Toggle Script -->
+  <script>
+    function toggleMenu() {
+      document.getElementById('navList').classList.toggle('active');
+    }
+    // Highlight current link
+    const navLinks = document.querySelectorAll('.nav-item');
+    navLinks.forEach(link => {
+      if (link.href === window.location.href) {
+        link.classList.add('active');
+      }
+    });
+    </script>
+</body>
+</html>

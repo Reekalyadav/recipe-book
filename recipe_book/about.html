@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About - Delicious Recipe</title>
+  <link rel="stylesheet" href="style1.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+  
+</head>
+<body>
+
+  <!-- Header/Navbar -->
+  <header>
+    <div class="container">
+      <h1 class="logo">Delicious Recipe</h1>
+      <nav>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <ul class="nav-list" id="navList">
+          <li><a href="index.html" class="nav-item">Home</a></li>
+          <li><a href="about.html" class="nav-item active">About</a></li>
+          <li><a href="recipes.html" class="nav-item">Recipes</a></li>
+          <li><a href="contact.html" class="nav-item">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main About Content -->
+  <main class="about-section container">
+    <h2>About Us</h2>
+    
+    <div class="about-left">
+    <p>Welcome to <strong>Delicious Recipe</strong> — your go-to guide for tasty, easy-to-make recipes from across India!
+         Whether you crave spicy street snacks, homestyle curries, or sweet desserts, we’ve got something to satisfy your taste buds.</p><br>
+
+    <p>This site was built to help beginners and food lovers cook confidently at home. Each recipe is curated with simple steps, 
+         you can find easily, and tips to make your cooking joyful.</p><br>
+
+    <p>From North Indian delights like <em>Paneer Butter Masala</em> to South Indian staples like <em>Dosa</em>,
+         our goal is to bring authentic Indian food to your plate with ease.</p><br>
+    <p>Thanks for visiting! Keep cooking, keep exploring!</p>
+    </div>
+
+    <div class="about-img">
+    <img src="images/about-cooking.jpeg" width="350px" height="450px" alt="About Us">
+  </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Delicious Recipe | All Rights Reserved</p>
+  </footer>
+
+  <!-- Toggle Script -->
+  <script>
+    function toggleMenu() {
+      document.getElementById('navList').classList.toggle('active');
+    }
+
+    // Highlight current link
+    const navLinks = document.querySelectorAll('.nav-item');
+    navLinks.forEach(link => {
+      if (link.href === window.location.href) {
+        link.classList.add('active');
+      }
+    });
+  </script>
+</body>
+</html>

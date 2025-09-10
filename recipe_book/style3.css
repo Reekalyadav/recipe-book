@@ -1,0 +1,115 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+/* --- Navbar --- */
+nav {
+  background: #222;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav ul li a.active {
+  border-bottom: 2px solid #ff6600;  /* Highlight current link */
+}
+
+/* Contact Section */
+.contact-section {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 20px;
+    text-align: left;
+}
+.contact-heading {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contact-form label {
+    font-weight: bold;
+    color: #333;
+}
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #ff6347;
+}
+.submit-btn {
+    background-color: #222;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.submit-btn:hover {
+    background-color: #222;
+}
+
+/* --- Footer --- */
+footer {
+  background: #222;
+  color: #ddd;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 900px) {
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .about-left {
+    padding-right: 0;
+    margin-bottom: 40px;
+  }
+  .about-text {
+    flex-direction: column;
+  }
+  .about-text p {
+    flex: 1 1 100%;
+  }
+}
+
+

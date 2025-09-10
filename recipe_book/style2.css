@@ -1,0 +1,111 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+/* --- Navbar --- */
+nav {
+  background: #222;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav ul li a.active {
+  border-bottom: 2px solid #ff6600;  /* Highlight current link */
+}
+
+/* Recipes Section */
+.recipes-section {
+  margin-top: 80px; /* Prevent nav bar overlap */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.recipe-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.category-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 5px 8px rgb(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+}
+
+.category-card h2 a {
+  color: #222;
+  text-decoration: none;
+}
+
+.category-card h2 a:hover {
+  text-decoration: underline;
+}
+
+.category-card p {
+  margin-top: 10px;
+  color: #555;
+  font-size: 0.95rem;
+}
+.about-img {
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: center;
+}
+/* --- Footer --- */
+footer {
+  background: #222;
+  color: #ddd;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 900px) {
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .about-left {
+    padding-right: 0;
+    margin-bottom: 40px;
+  }
+  .about-text {
+    flex-direction: column;
+  }
+  .about-text p {
+    flex: 1 1 100%;
+  }
+}
+

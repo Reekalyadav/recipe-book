@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel ="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class = "container">
+            <h1 class ="logo"> Delicious Recipe </h1>
+            <nav>
+                <div class="menu-icon">&#9776;</div>
+                <ul class="nav-list">
+                <li><a href="index.html" class="nav-item">Home</a></li>
+                <li><a href="about.html" class="nav-item">About</a></li>
+                <li><a href="recipes.html" class="nav-item">Recipes</a></li>
+                <li><a href="contact.html" class="nav-item">Contact</a></li>
+                </ul>
+
+            </nav>
+
+        </div>
+    </header>
+<!--           HERO SECTION -->
+
+
+    <section class="hero">
+  <div class="hero-section">
+    <h2>Welcome to Your Recipe Book!</h2>
+    <p>Search delicious recipes for your cravings.</p>
+
+    <form onsubmit="return handleSearch()" class="search-box">
+      <input type="text" id="searchInput" placeholder="Search recipe..." />
+      <button type="submit">Search</button>
+    </form>
+  </div>
+</section>
+
+
+<!--           RECIPES SECTION -->
+
+    <section class="recipes">
+        <h1>Featured Recipes</h1>
+        <div class="recipe-section">
+            <div class="recipe-card">
+                <img src="images/north indian.jpeg" alt="">
+                <h2>North Indian</h2>
+                <p> Traditional recipes from Northern India known
+                     for rich gravies, aromatic spices, and dishes 
+                     like paneer, dal, and roti.</p>
+             
+                <a href="north-indian.html">View Recipes</a>
+
+            </div>
+            <div class="recipe-card">
+                <img src="images/south indian.jpeg" alt="">
+                <h2>South Indian</h2>
+                <p> Flavorful and light dishes from Southern India, 
+                    featuring rice, lentils, coconut, and items like 
+                    dosa, idli, and sambar. </p>
+                <a href="south-indian.html">View Recipes</a>
+            </div>
+            <div class="recipe-card">
+                <img src="images/snacks.jpeg" alt="">
+                <h2>Snacks</h2>
+                <p>  Quick and tasty bites perfect for evenings or
+                     parties, including items like samosa, pakora,
+                      and bhel puri.</p>
+                    <a href="snacks.html">View Recipes</a>
+            </div>
+            <div class="recipe-card">
+                <img src="images/desserts.jpeg" alt="">
+                <h2>Desserts</h2>
+                <p>  Sweet treats that complete any meal, ranging from 
+                    classic gulab jamun to kheer and halwa.</p>
+                <a href="desserts.html">View Recipes</a>
+            </div>
+            <div class="recipe-card">
+                <img src="images/quick meals.jpeg" alt="">
+                <h2>Quick Meals</h2>
+                <p> Simple, fast-to-make dishes ideal for busy days,
+                     such as poha, upma, or instant noodles with a twist.</p>
+                <a href="quick-meals.html">View Recipes</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <p>&copy; 2025 Delicious Recipes</p>
+        </div>
+    </footer>
+
+  <script>
+  function handleSearch() {
+    const input = document.getElementById("searchInput").value.toLowerCase().trim();
+
+    const recipeKeywords = {
+      // North Indian
+      "paneer": "north-indian.html",
+      "aloo gobi": "north-indian.html",
+      "chole": "north-indian.html",
+      "bhature": "north-indian.html",
+      // South Indian
+      "idli": "south-indian.html",
+      "dosa": "south-indian.html",
+      "sambar": "south-indian.html",
+      // Snacks
+      "samosa": "snacks.html",
+      "pakora": "snacks.html",
+      // Desserts
+      "gulab jamun": "desserts.html",
+      "kheer": "desserts.html",
+      // Quick Meals
+      "noodles": "quick-meals.html",
+      "upma": "quick-meals.html"
+    };
+
+    const url = recipeKeywords[input];
+
+    if (url) {
+      window.location.href = url;
+    } else {
+      alert("Recipe not found. Try a different name.");
+    }
+
+    return false; // prevent form submission refresh
+  }
+</script>
+
+
+
+</body>
+</html>
